@@ -189,6 +189,7 @@ export default function createHandler(
     };
 
     componentWillUnmount() {
+      this._dropGestureHandler();
       if (this._updateEnqueued) {
         clearImmediate(this._updateEnqueued);
       }
